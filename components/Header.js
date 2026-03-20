@@ -84,7 +84,7 @@ function Header() {
         <div className="bg-white mx-auto px-4 sm:px-6 lg:px-36">
           <div className="flex justify-between items-center h-20">
             <a href="/" className="flex items-center">
-              <img src="assets/radius-logo.png" alt="Radius Architects & Associates" className="h-12 transition-transform duration-300 hover:scale-105" />
+              <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="h-24 transition-transform duration-300 hover:scale-105" />
             </a>
             
             <nav className="hidden md:flex space-x-8">

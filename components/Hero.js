@@ -2,10 +2,10 @@ function Hero() {
   try {
     return (
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden" data-name="hero" data-file="components/Hero.js">
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+        <video autoPlay loop muted playsInline poster="assets/video-placeholder.webp" className="absolute inset-0 w-full h-full object-cover z-0">
           <source src="assets/landing_page_video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)] via-[#0d3d5f] to-[var(--primary-color)] opacity-45 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)] via-[#0d3d5f] to-[var(--primary-color)] opacity-30 z-10"></div>
         
         <div className="relative z-20 text-center mx-auto px-4 sm:px-6 lg:px-36">
           <h1 className="text-4xl! md:text-6xl! text-white mb-6 leading-tight">
