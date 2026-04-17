@@ -42,7 +42,7 @@ function Footer() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
             {/* Column 1: Brand + Authorities */}
             <div className="lg:col-span-1">
-              <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="h-30" />
+              <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="w-full h-auto" />
               <p className="text-gray-600 text-sm mb-5 leading-relaxed">India's trusted partner for multi-authority licensing and DCPR 2034 compliance.</p>
               <h4 className="text-sm font-bold text-[var(--primary-color)] uppercase tracking-wider mb-3">Authorities We Work With</h4>
               <div className="flex flex-wrap gap-2">
@@ -119,7 +119,7 @@ function Footer() {
                 <a href="#" className="hover:text-[var(--primary-color)] transition-colors duration-300">Sitemap</a>
               </div> */}
               <p className="text-base text-gray-500">
-                Designed by <a href="https://infinitysquaredtech.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary-color)] font-semibold hover:underline">Infinity Squared Technologies</a>
+                Designed by <a href="https://infinitysquaredtech.com" target="_blank" className="text-[var(--primary-color)] font-semibold hover:underline">Infinity Squared Technologies</a>
               </p>
             </div>
           </div>
