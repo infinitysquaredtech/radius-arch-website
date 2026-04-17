@@ -38,7 +38,7 @@ function Footer() {
         <footer className="bg-[var(--background-third)]" data-name="footer" data-file="components/Footer.js">
 
           {/* Main Footer Content */}
-          <div className="mx-auto px-4 sm:px-6 lg:px-36 pt-12 pb-6">
+          <div className="mx-auto px-4 sm:px-6 lg:px-20 pt-12 pb-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
             {/* Column 1: Brand + Authorities */}
             <div className="lg:col-span-1">

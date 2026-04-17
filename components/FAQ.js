@@ -35,7 +35,7 @@ function FAQ() {
 
     return (
       <section id="faq" className="py-20 bg-gradient-to-b from-gray-50 to-white" data-name="faq" data-file="components/FAQ.js">
-        <div className="mx-auto px-4 sm:px-6 lg:px-36">
+        <div className="mx-auto px-4 sm:px-6 lg:px-20">
 
           {/* Section header */}
           <div className="text-center mb-16">
