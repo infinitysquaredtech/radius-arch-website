@@ -40,6 +40,7 @@ function App() {
         <AboutSection />
         <ServicesGrid />
         <Testimonials />
+        <FAQ />
         <ContactForm />
         <Footer />
       </div>

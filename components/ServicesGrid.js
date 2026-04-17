@@ -10,8 +10,8 @@ function ServicesGrid() {
     ];
 
     return (
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white" data-name="services-grid" data-file="components/ServicesGrid.js">
-        <div className="mx-auto px-4 sm:px-6 lg:px-36">
+      <section id="services" className="py-20 bg-gradient-to-b from-gray-50 to-white" data-name="services-grid" data-file="components/ServicesGrid.js">
+        <div className="mx-auto px-4 sm:px-6 lg:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl text-[var(--primary-color)] mb-3">What We Offer</h2>
             <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">We deliver comprehensive solutions that transform ideas into reality</p>

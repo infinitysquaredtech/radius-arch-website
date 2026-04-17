@@ -66,7 +66,7 @@ function Testimonials() {
 
     return (
       <section id='testimonial' className="py-20 bg-white" data-name="testimonials" data-file="components/Testimonials.js">
-        <div className="mx-auto px-4 sm:px-6 lg:px-36">
+        <div className="mx-auto px-4 sm:px-6 lg:px-20">
           <h2 className="text-4xl text-center text-[var(--primary-color)] mb-2">Testimonials</h2>
           <h3 className="text-xl text-center text-[var(--text-secondary)] mb-12">What Our Clients Say</h3>
           

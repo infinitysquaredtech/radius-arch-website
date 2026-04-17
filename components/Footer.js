@@ -29,7 +29,7 @@ function Footer() {
       { title: 'Structural Design', idx: 5 }
     ];
 
-    const authorities = ['BMC', 'MCGM', 'MHADA', 'SRA', 'CIDCO'];
+    const authorities = ['BMC', 'MHADA', 'CIDCO', 'SRA'];
 
     const linkClass = "block text-gray-600 hover:text-[var(--secondary-color)] transition-all duration-300 hover:translate-x-1 text-sm";
 
@@ -38,11 +38,11 @@ function Footer() {
         <footer className="bg-[var(--background-third)]" data-name="footer" data-file="components/Footer.js">
 
           {/* Main Footer Content */}
-          <div className="mx-auto px-4 sm:px-6 lg:px-36 pt-12 pb-6">
+          <div className="mx-auto px-4 sm:px-6 lg:px-20 pt-12 pb-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
             {/* Column 1: Brand + Authorities */}
             <div className="lg:col-span-1">
-              <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="h-30" />
+              <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="w-full h-auto" />
               <p className="text-gray-600 text-sm mb-5 leading-relaxed">India's trusted partner for multi-authority licensing and DCPR 2034 compliance.</p>
               <h4 className="text-sm font-bold text-[var(--primary-color)] uppercase tracking-wider mb-3">Authorities We Work With</h4>
               <div className="flex flex-wrap gap-2">
@@ -59,7 +59,7 @@ function Footer() {
               <h3 className="text-lg text-[var(--primary-color)] font-bold mb-4">Quick Links</h3>
               <div className="space-y-2.5">
                 <a href="#home" className={linkClass}>Home</a>
-                <a href="services.html" className={linkClass}>Services</a>
+                <a href="#services" className={linkClass}>Services</a>
                 <a href="projects.html" className={linkClass}>Projects</a>
                 <a href="team.html" className={linkClass}>Our Team</a>
                 <a href="#contact" className={linkClass}>Contact Us</a>
@@ -119,7 +119,7 @@ function Footer() {
                 <a href="#" className="hover:text-[var(--primary-color)] transition-colors duration-300">Sitemap</a>
               </div> */}
               <p className="text-base text-gray-500">
-                Designed by <a href="https://infinitysquaredtech.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary-color)] font-semibold hover:underline">Infinity Squared Technologies</a>
+                Designed by <a href="https://infinitysquaredtech.com" target="_blank" className="text-[var(--primary-color)] font-semibold hover:underline">Infinity Squared Technologies</a>
               </p>
             </div>
           </div>
