@@ -29,7 +29,7 @@ function Footer() {
       { title: 'Structural Design', idx: 5 }
     ];
 
-    const authorities = ['BMC', 'MCGM', 'MHADA', 'SRA', 'CIDCO'];
+    const authorities = ['BMC', 'MHADA', 'CIDCO', 'SRA'];
 
     const linkClass = "block text-gray-600 hover:text-[var(--secondary-color)] transition-all duration-300 hover:translate-x-1 text-sm";
 
