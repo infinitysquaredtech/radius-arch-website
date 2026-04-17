@@ -59,7 +59,7 @@ function Footer() {
               <h3 className="text-lg text-[var(--primary-color)] font-bold mb-4">Quick Links</h3>
               <div className="space-y-2.5">
                 <a href="#home" className={linkClass}>Home</a>
-                <a href="services.html" className={linkClass}>Services</a>
+                <a href="#services" className={linkClass}>Services</a>
                 <a href="projects.html" className={linkClass}>Projects</a>
                 <a href="team.html" className={linkClass}>Our Team</a>
                 <a href="#contact" className={linkClass}>Contact Us</a>
