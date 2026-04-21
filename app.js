@@ -39,6 +39,7 @@ function App() {
         <ClientsServed />
         <AboutSection />
         <ServicesGrid />
+        <ProcessSteps />
         <Testimonials />
         <FAQ />
         <ContactForm />
