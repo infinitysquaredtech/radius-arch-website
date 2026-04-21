@@ -45,7 +45,7 @@ function FAQ() {
           </div>
 
           {/* Accordion list */}
-          <div className="max-w-3xl mx-auto" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div className="max-w-6xl mx-auto" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
@@ -87,7 +87,7 @@ function FAQ() {
                     aria-expanded={isOpen}
                   >
                     <span
-                      className="text-base font-semibold pr-2"
+                      className="text-xl font-semibold pr-2"
                       style={{
                         color: isOpen ? 'var(--primary-color)' : '#111827',
                         transition: 'color 0.2s ease'
@@ -122,7 +122,7 @@ function FAQ() {
                       <div className="w-full h-px bg-gray-100 mb-4"></div>
                       <p
                         className="leading-relaxed"
-                        style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem' }}
+                        style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}
                       >
                         {faq.answer}
                       </p>
