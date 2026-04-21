@@ -91,6 +91,7 @@ function ProjectsPage() {
     const projects = [
       {
         title: 'Marine Drive Redevelopment',
+        status: 'On-going',
         client: 'MHADA',
         location: 'Marine Drive, Mumbai',
         image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
@@ -102,6 +103,7 @@ function ProjectsPage() {
       },
       {
         title: 'Navi Mumbai Residential Complex',
+        status: 'Completed - 2023',
         client: 'BMC',
         location: 'Navi Mumbai',
         image: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80',
@@ -112,6 +114,7 @@ function ProjectsPage() {
       },
       {
         title: 'Dharavi SRA Housing Project',
+        status: 'Completed - 2022',
         client: 'SRA',
         location: 'Dharavi, Mumbai',
         image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
@@ -134,8 +137,9 @@ function ProjectsPage() {
                   <img src={project.image} alt={project.title} className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-[var(--primary-color)] mb-2 transition-colors duration-300 group-hover:text-[var(--secondary-color)]">{project.title}</h3>
-                    <p className="text-sm text-[var(--text-secondary)] mb-1">Client: {project.client}</p>
-                    <p className="text-sm text-[var(--text-secondary)] mb-4">{project.location}</p>
+                    <p className={`text-base font-semibold mb-2 ${project.status.includes('Completed') ? 'text-green-600' : 'text-yellow-600'}`}>{project.status}</p>
+                    <p className="text-base text-[var(--text-secondary)] mb-1">Client: {project.client}</p>
+                    <p className="text-base text-[var(--text-secondary)] mb-4">{project.location}</p>
                     <button onClick={() => openProject(project)} className="px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95">
                       View Photos
                     </button>
@@ -159,6 +163,7 @@ function ProjectsPage() {
                 <div className="flex-1">
                   <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2">{selectedProject.title}</h2>
                   <div className="flex flex-wrap gap-2 md:gap-4 text-xs md:text-sm text-gray-300">
+                    <span className={`font-semibold ${selectedProject.status.includes('Completed') ? 'text-green-400' : 'text-yellow-400'}`}>{selectedProject.status}</span>
                     <span className="flex items-center gap-1">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
