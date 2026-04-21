@@ -75,7 +75,7 @@ function Testimonials() {
               <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / visibleCount)}%)` }}>
                 {testimonials.map((testimonial, idx) => (
                   <div key={idx} className="min-w-full md:min-w-[33.333%] px-4">
-                    <div className="bg-[var(--background-third)] p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div className="min-h-full bg-[var(--background-third)] p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                       <div className="flex items-center mb-6">
                         <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
                         <div>
