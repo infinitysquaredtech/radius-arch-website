@@ -105,6 +105,7 @@ function Header() {
                 )}
               </div>
               <a href="#testimonial" onClick={(e) => navigateToSection(e, 'testimonial')} className="text-[var(--text-primary)] hover:text-[var(--secondary-color)] transition">Testimonials</a>
+              <a href="#faq" onClick={(e) => navigateToSection(e, 'faq')} className="text-[var(--text-primary)] hover:text-[var(--secondary-color)] transition">FAQ</a>
               <a href="projects.html" onClick={handleLinkClick} className="text-[var(--text-primary)] hover:text-[var(--secondary-color)] transition">Projects</a>
               <a href="team.html" onClick={handleLinkClick} className="text-[var(--text-primary)] hover:text-[var(--secondary-color)] transition">Our Team</a>
               <a href="#contact" onClick={(e) => navigateToSection(e, 'contact')} className="text-[var(--text-primary)] hover:text-[var(--secondary-color)] transition">Contact Us</a>
@@ -143,6 +144,7 @@ function Header() {
                 )}
               </div>
               <a href="#testimonial" onClick={(e) => navigateToSection(e, 'testimonial')} className="block py-2 transition-all duration-200 hover:translate-x-2 hover:text-[var(--secondary-color)]">Testimonials</a>
+              <a href="#faq" onClick={(e) => navigateToSection(e, 'faq')} className="block py-2 transition-all duration-200 hover:translate-x-2 hover:text-[var(--secondary-color)]">FAQ</a>
               <a href="projects.html" onClick={handleLinkClick} className="block py-2 transition-all duration-200 hover:translate-x-2 hover:text-[var(--secondary-color)]">Projects</a>
               <a href="team.html" onClick={handleLinkClick} className="block py-2 transition-all duration-200 hover:translate-x-2 hover:text-[var(--secondary-color)]">Our Team</a>
               <a href="#contact" onClick={(e) => navigateToSection(e, 'contact')} className="block py-2 transition-all duration-200 hover:translate-x-2 hover:text-[var(--secondary-color)]">Contact Us</a>
