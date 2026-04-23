@@ -56,7 +56,13 @@ function TeamPage() {
       { name: 'Mr. Rajesh Sharma', title: 'Legal Associate', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80' },
       { name: 'Mr. Rajesh Sharma', title: 'Legal Associate', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80' },
       { name: 'Mr. Pal Ajay Singh', title: 'Structural Associate', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80' },
-      { name: 'Evolute Team', title: 'Structural Associates', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' }
+      { name: 'Evolute Team', title: 'Structural Associates', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
+      { name: 'Madan Dedhia & Co.', title: 'Chartered Accountants', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80' },
+      { name: 'Mohd. Shahid & Associates', title: 'Chartered Accountants', image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&q=80' },
+      { name: 'Mr. Vishal Parekh', title: 'Business Development', image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&q=80' },
+      { name: 'Mrs. Darshana Gawade', title: 'Office Admin Staff', image: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=400&q=80' },
+      { name: 'Mr. Rohit Salvi', title: 'Office Admin Staff', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80' },
+      { name: 'Mr. Vaishnav Gurav', title: 'Office Admin Staff', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80' }
     ];
 
     return (
