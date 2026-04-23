@@ -60,6 +60,7 @@ function Footer() {
               <div className="space-y-2.5">
                 <a href="#home" className={linkClass}>Home</a>
                 <a href="#services" className={linkClass}>Services</a>
+                <a href="#process" className={linkClass}>Section 79(A)</a>
                 <a href="projects.html" className={linkClass}>Projects</a>
                 <a href="team.html" className={linkClass}>Our Team</a>
                 <a href="#contact" className={linkClass}>Contact Us</a>
