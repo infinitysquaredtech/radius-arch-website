@@ -296,34 +296,19 @@ function ProcessSteps() {
 
     /* ── Illustration panel (shared between mobile & desktop) ── */
     const illustrationPanel = (
-      <div
-        className="relative rounded-2xl overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #f0f4ff 0%, #e8f5ee 100%)',
-          aspectRatio: '4 / 3'
-        }}
-      >
+      <div className="relative rounded-2xl overflow-hidden process-illustration-panel">
         {illustrations.map((svg, idx) => (
           <div
             key={idx}
-            className="absolute inset-0 flex items-center justify-center p-6 sm:p-10"
-            style={{
-              opacity: activeStep === idx ? 1 : 0,
-              transform: activeStep === idx ? 'scale(1) translateY(0)' : 'scale(0.92) translateY(12px)',
-              transition: 'opacity 0.5s cubic-bezier(0.4,0,0.2,1), transform 0.5s cubic-bezier(0.4,0,0.2,1)',
-              pointerEvents: activeStep === idx ? 'auto' : 'none'
-            }}
+            className={`absolute inset-0 flex items-center justify-center p-6 sm:p-10 process-illustration-slide ${activeStep === idx ? 'process-illustration-slide-active' : ''}`}
           >
             {svg}
           </div>
         ))}
 
         {/* Step label overlay */}
-        <div
-          className="absolute bottom-0 left-0 right-0 px-5 py-3"
-          style={{ background: 'linear-gradient(to top, rgba(41,67,141,0.08), transparent)' }}
-        >
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#29438D', opacity: 0.5 }}>
+        <div className="absolute bottom-0 left-0 right-0 px-5 py-3 process-step-label-overlay">
+          <span className="text-xs font-bold tracking-widest uppercase process-step-label-text">
             Step {String(activeStep + 1).padStart(2, '0')} of {String(steps.length).padStart(2, '0')}
           </span>
         </div>
@@ -342,105 +327,59 @@ function ProcessSteps() {
           </div>
 
           {/* ── Two-column layout ── */}
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row" style={{ gap: '2.5rem' }}>
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
 
             {/* Left — Steps accordion */}
             <div className="w-full lg:w-[45%]">
 
               {/* Mobile-only illustration panel */}
               {isMobile && (
-                <div className="sticky mb-6" style={{ top: '1rem', zIndex: 10 }}>
+                <div className="sticky mb-6 top-4 z-10">
                   {illustrationPanel}
                 </div>
               )}
 
               {/* Progress indicator */}
-              <div className="flex items-center mb-6" style={{ gap: '0.5rem' }}>
+              <div className="flex items-center mb-6 gap-2">
                 {steps.map((_, idx) => (
                   <div
                     key={idx}
-                    style={{
-                      height: '3px',
-                      flex: 1,
-                      borderRadius: '2px',
-                      background: idx <= activeStep
-                        ? 'linear-gradient(to right, #29438D, #009946)'
-                        : '#e0e4ed',
-                      transition: 'background 0.4s ease'
-                    }}
+                    className={`process-progress-segment ${idx <= activeStep ? 'process-progress-segment-active' : ''}`}
                   />
                 ))}
               </div>
 
               {/* Step cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <div className="flex flex-col gap-2">
                 {steps.map((step, idx) => {
                   const isActive = activeStep === idx;
                   return (
                     <div
                       key={idx}
-                      className="rounded-xl cursor-pointer"
-                      style={{
-                        padding: '1rem',
-                        background: isActive ? 'white' : 'transparent',
-                        borderLeft: isActive ? '4px solid var(--primary-color)' : '4px solid transparent',
-                        boxShadow: isActive ? '0 4px 20px rgba(41,67,141,0.1)' : 'none',
-                        transition: 'all 0.35s cubic-bezier(0.4,0,0.2,1)'
-                      }}
+                      className={`rounded-xl cursor-pointer process-step-card ${isActive ? 'process-step-card-active' : ''}`}
                       onMouseEnter={() => { if (!isMobile) setActiveStep(idx); }}
                       onClick={() => { if (isMobile) setActiveStep(idx); }}
                     >
-                      <div className="flex items-start" style={{ gap: '1rem' }}>
+                      <div className="flex items-start gap-4">
                         {/* Step number circle */}
                         <div
-                          className="flex-shrink-0 flex items-center justify-center rounded-full"
-                          style={{
-                            width: '2.5rem',
-                            height: '2.5rem',
-                            background: isActive
-                              ? 'linear-gradient(135deg, #29438D, #009946)'
-                              : '#f0f0f0',
-                            transition: 'background 0.35s ease',
-                            boxShadow: isActive ? '0 4px 12px rgba(41,67,141,0.25)' : 'none'
-                          }}
+                          className={`flex-shrink-0 flex items-center justify-center rounded-full process-step-number ${isActive ? 'process-step-number-active' : ''}`}
                         >
-                          <span
-                            className="text-sm font-bold"
-                            style={{
-                              color: isActive ? 'white' : '#aaa',
-                              transition: 'color 0.3s ease'
-                            }}
-                          >
+                          <span className={`text-sm font-bold process-step-number-text ${isActive ? 'process-step-number-text-active' : ''}`}>
                             {String(idx + 1).padStart(2, '0')}
                           </span>
                         </div>
 
                         {/* Text content */}
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <h3
-                            className="font-bold text-lg"
-                            style={{
-                              color: isActive ? 'var(--primary-color)' : '#888',
-                              transition: 'color 0.3s ease'
-                            }}
-                          >
+                        <div className="process-step-text-content">
+                          <h3 className={`font-bold text-lg process-step-title ${isActive ? 'process-step-title-active' : ''}`}>
                             {step.title}
                           </h3>
 
                           {/* Expanding description */}
-                          <div
-                            style={{
-                              display: 'grid',
-                              gridTemplateRows: isActive ? '1fr' : '0fr',
-                              opacity: isActive ? 1 : 0,
-                              transition: 'grid-template-rows 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease'
-                            }}
-                          >
-                            <div style={{ overflow: 'hidden', minHeight: 0 }}>
-                              <p
-                                className="text-sm leading-relaxed"
-                                style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}
-                              >
+                          <div className={`process-step-description ${isActive ? 'process-step-description-active' : ''}`}>
+                            <div className="process-step-description-inner">
+                              <p className="text-sm leading-relaxed process-step-description-text">
                                 {step.desc}
                               </p>
                             </div>
@@ -456,7 +395,7 @@ function ProcessSteps() {
             {/* Right — Sticky illustration (desktop only) */}
             {!isMobile && (
               <div className="w-full lg:w-[55%] flex items-center">
-                <div className="sticky w-full" style={{ top: '6rem' }}>
+                <div className="sticky w-full top-24">
                   {illustrationPanel}
                 </div>
               </div>

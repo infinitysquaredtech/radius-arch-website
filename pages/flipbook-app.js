@@ -22,7 +22,7 @@ class ErrorBoundary extends React.Component {
 const PageCover = React.forwardRef((props, ref) => {
     return (
     <div className="page page-cover" ref={ref} data-density="hard">
-        <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
+        <div className="page-content flipbook-page-cover-content-wrap">
             {props.children}
         </div>
     </div>
@@ -32,9 +32,9 @@ const PageCover = React.forwardRef((props, ref) => {
 const Page = React.forwardRef((props, ref) => {
     return (
     <div className="page" ref={ref}>
-        <div className="page-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="page-content flipbook-page-content-center">
         {/* <h2 className="page-header">Page header - {props.number}</h2> */}
-        <div className="page-image" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="page-image-wrapper">
             {props.imageChildren}
         </div>
         <div className="page-text">{props.children}</div>
@@ -71,13 +71,7 @@ function MyBook(props) {
         
 
         return (
-            <div className="min-h-screen flex items-center justify-center overflow-hidden"
-                style={{
-                    backgroundImage: 'url("assets/flipbook/background.webp")',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}>
+            <div className="min-h-screen flex items-center justify-center overflow-hidden flipbook-book-shell">
                 <HTMLFlipBook
                     width={816}
                     height={960}
@@ -96,86 +90,34 @@ function MyBook(props) {
                     className="demo-book"
                 >
                     <PageCover>
-                        <div style={{
-                            width: '100%',
-                            height: '100%',
-                            background: '#ffffff',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '8% 10%',
-                            boxSizing: 'border-box',
-                            textAlign: 'center',
-                            position: 'relative',
-                            overflow: 'hidden',
-                        }}>
+                        <div className="flipbook-cover-base flipbook-cover-front">
                             {/* Decorative border */}
-                            <div style={{
-                                position: 'absolute',
-                                inset: '12px',
-                                border: '1px solid rgba(41, 67, 141, 0.2)',
-                                pointerEvents: 'none',
-                            }} />
+                            <div className="flipbook-cover-border" />
                             {/* Corner accents */}
-                            <div style={{ position: 'absolute', top: '20px', left: '20px', width: '40px', height: '40px', borderTop: '2px solid #29438D', borderLeft: '2px solid #29438D' }} />
-                            <div style={{ position: 'absolute', top: '20px', right: '20px', width: '40px', height: '40px', borderTop: '2px solid #29438D', borderRight: '2px solid #29438D' }} />
-                            <div style={{ position: 'absolute', bottom: '20px', left: '20px', width: '40px', height: '40px', borderBottom: '2px solid #29438D', borderLeft: '2px solid #29438D' }} />
-                            <div style={{ position: 'absolute', bottom: '20px', right: '20px', width: '40px', height: '40px', borderBottom: '2px solid #29438D', borderRight: '2px solid #29438D' }} />
+                            <div className="flipbook-cover-corner flipbook-cover-corner-tl" />
+                            <div className="flipbook-cover-corner flipbook-cover-corner-tr" />
+                            <div className="flipbook-cover-corner flipbook-cover-corner-bl" />
+                            <div className="flipbook-cover-corner flipbook-cover-corner-br" />
 
                             {/* Logo */}
-                            <img src="assets/radius-logo.png" alt="Radius Architects & Associates" style={{
-                                maxWidth: '65%',
-                                height: 'auto',
-                                marginBottom: '28px',
-                            }} />
+                            <img src="assets/radius-logo.png" alt="Radius Architects & Associates" className="flipbook-cover-logo-front" />
 
                             {/* Divider line */}
-                            <div style={{ width: '60%', height: '2px', background: 'linear-gradient(90deg, transparent, #009946, transparent)', marginBottom: '28px' }} />
+                            <div className="flipbook-cover-divider flipbook-cover-divider-front-top" />
 
                             {/* Title */}
-                            <h1 style={{
-                                color: '#29438D',
-                                fontSize: 'clamp(18px, 4vw, 28px)',
-                                fontWeight: '700',
-                                lineHeight: '1.35',
-                                letterSpacing: '0.5px',
-                                fontFamily: "'Montserrat', sans-serif",
-                                margin: '0',
-                                maxWidth: '90%',
-                            }}>
+                            <h1 className="flipbook-cover-title">
                                 Expert guidance and end-to-end solutions for hassle-free approvals and project success
                             </h1>
 
                             {/* Bottom decorative element */}
-                            <div style={{ width: '30%', height: '2px', background: 'linear-gradient(90deg, transparent, #009946, transparent)', marginTop: '32px' }} />
+                            <div className="flipbook-cover-divider flipbook-cover-divider-front-bottom" />
 
                             {/* Swipe hint */}
-                            <div style={{
-                                position: 'absolute',
-                                bottom: '28px',
-                                right: '28px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '6px',
-                                animation: 'swipeHint 1.5s ease-in-out infinite',
-                            }}>
-                                <span style={{ color: '#29438D', fontSize: 'clamp(16px, 3vw, 22px)', opacity: 0.7 }}>&#x276E;</span>
-                                <span style={{
-                                    color: '#29438D',
-                                    fontSize: 'clamp(12px, 2.5vw, 16px)',
-                                    fontFamily: "'Lato', sans-serif",
-                                    fontWeight: '400',
-                                    letterSpacing: '0.5px',
-                                    opacity: 0.7,
-                                }}>Swipe to open</span>
+                            <div className="flipbook-swipe-hint">
+                                <span className="flipbook-swipe-hint-arrow">&#x276E;</span>
+                                <span className="flipbook-swipe-hint-text">Swipe to open</span>
                             </div>
-                            <style>{`
-                                @keyframes swipeHint {
-                                    0%, 100% { transform: translateX(0); opacity: 0.7; }
-                                    50% { transform: translateX(-5px); opacity: 1; }
-                                }
-                            `}</style>
                         </div>
                     </PageCover>
                     <Page number={1} imageChildren={<img src="assets/flipbook/1a.webp" alt="Image 1a" className="page-image" />}></Page>
@@ -263,62 +205,31 @@ function MyBook(props) {
                     <Page number={83} imageChildren={<img src="assets/flipbook/42a.webp" alt="Image 42a" className="page-image" />}></Page>
                     <Page number={84} imageChildren={<img src="assets/flipbook/42b.webp" alt="Image 42b" className="page-image" />}></Page>                    
                     <PageCover>
-                        <div style={{
-                            width: '100%',
-                            height: '100%',
-                            background: '#ffffff',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '8% 10%',
-                            boxSizing: 'border-box',
-                            textAlign: 'center',
-                            position: 'relative',
-                            overflow: 'hidden',
-                        }}>
+                        <div className="flipbook-cover-base flipbook-cover-back">
                             {/* Decorative border */}
-                            <div style={{
-                                position: 'absolute',
-                                inset: '12px',
-                                border: '1px solid rgba(41, 67, 141, 0.2)',
-                                pointerEvents: 'none',
-                            }} />
+                            <div className="flipbook-cover-border" />
                             {/* Corner accents */}
-                            <div style={{ position: 'absolute', top: '20px', left: '20px', width: '40px', height: '40px', borderTop: '2px solid #29438D', borderLeft: '2px solid #29438D' }} />
-                            <div style={{ position: 'absolute', top: '20px', right: '20px', width: '40px', height: '40px', borderTop: '2px solid #29438D', borderRight: '2px solid #29438D' }} />
-                            <div style={{ position: 'absolute', bottom: '20px', left: '20px', width: '40px', height: '40px', borderBottom: '2px solid #29438D', borderLeft: '2px solid #29438D' }} />
-                            <div style={{ position: 'absolute', bottom: '20px', right: '20px', width: '40px', height: '40px', borderBottom: '2px solid #29438D', borderRight: '2px solid #29438D' }} />
+                            <div className="flipbook-cover-corner flipbook-cover-corner-tl" />
+                            <div className="flipbook-cover-corner flipbook-cover-corner-tr" />
+                            <div className="flipbook-cover-corner flipbook-cover-corner-bl" />
+                            <div className="flipbook-cover-corner flipbook-cover-corner-br" />
 
                             {/* Logo */}
-                            <img src="assets/radius-logo.png" alt="Radius Architects & Associates" style={{
-                                maxWidth: '55%',
-                                height: 'auto',
-                                marginBottom: '24px',
-                            }} />
+                            <img src="assets/radius-logo.png" alt="Radius Architects & Associates" className="flipbook-cover-logo-back" />
 
-                            <div style={{ width: '60%', height: '2px', background: 'linear-gradient(90deg, transparent, #009946, transparent)', marginBottom: '20px' }} />
+                            <div className="flipbook-cover-divider flipbook-cover-divider-back-top" />
 
-                            <p style={{
-                                color: '#29438D',
-                                fontSize: 'clamp(11px, 2vw, 14px)',
-                                fontWeight: '400',
-                                letterSpacing: '3px',
-                                textTransform: 'uppercase',
-                                fontFamily: "'Montserrat', sans-serif",
-                                margin: '0',
-                            }}>
+                            <p className="flipbook-cover-subtitle">
                                 Radius Architects &amp; Associates
                             </p>
 
-                            <div style={{ width: '30%', height: '2px', background: 'linear-gradient(90deg, transparent, #009946, transparent)', marginTop: '20px' }} />
+                            <div className="flipbook-cover-divider flipbook-cover-divider-back-bottom" />
                         </div>
                     </PageCover>
                 </HTMLFlipBook>
                 
                 {/* Fullscreen Button */}
-                <div className="fixed bottom-4 right-4 text-white bg-black bg-opacity-50 px-3 py-4 rounded-full z-50"
-                    style={{ transition: 'opacity 0.3s ease', opacity: controlsVisible ? 1 : 0, pointerEvents: controlsVisible ? 'auto' : 'none' }}>
+                <div className={`fixed bottom-4 right-4 text-white bg-black bg-opacity-50 px-3 py-4 rounded-full z-50 flipbook-control ${controlsVisible ? 'flipbook-control-visible' : 'flipbook-control-hidden'}`}>
                     <button onClick={() => {
                         if (!document.fullscreenElement) {
                             document.documentElement.requestFullscreen();
@@ -331,14 +242,12 @@ function MyBook(props) {
                 </div>
                 
                 {/* Navigation Buttons */}
-                <div className="fixed top-1/2 left-4 text-white bg-black bg-opacity-50 px-3 py-4 rounded-full z-50 transform -translate-y-1/2"
-                    style={{ transition: 'opacity 0.3s ease', opacity: controlsVisible ? 1 : 0, pointerEvents: controlsVisible ? 'auto' : 'none' }}>
+                <div className={`fixed top-1/2 left-4 text-white bg-black bg-opacity-50 px-3 py-4 rounded-full z-50 transform -translate-y-1/2 flipbook-control ${controlsVisible ? 'flipbook-control-visible' : 'flipbook-control-hidden'}`}>
                     <button onClick={() => this.pageFlip.pageFlip().flipPrev()} className="cursor-pointer px-2 py-0">
                         <span className="icon-arrow-left text-3xl!"></span>
                     </button>
                 </div>
-                <div className="fixed top-1/2 right-4 text-white bg-black bg-opacity-50 px-3 py-4 rounded-full z-50 transform -translate-y-1/2"
-                    style={{ transition: 'opacity 0.3s ease', opacity: controlsVisible ? 1 : 0, pointerEvents: controlsVisible ? 'auto' : 'none' }}>
+                <div className={`fixed top-1/2 right-4 text-white bg-black bg-opacity-50 px-3 py-4 rounded-full z-50 transform -translate-y-1/2 flipbook-control ${controlsVisible ? 'flipbook-control-visible' : 'flipbook-control-hidden'}`}>
                     <button onClick={() => this.pageFlip.pageFlip().flipNext()} className="cursor-pointer px-2 py-0">
                         <span className="icon-arrow-right text-3xl!"></span>
                     </button>

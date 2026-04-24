@@ -151,7 +151,7 @@ function ProjectsPage() {
         </section>
 
         {selectedProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center animate-fade-in">
+          <div className="fixed inset-0 z-50 flex items-center justify-center projects-animate-fade-in">
             {/* Backdrop with blur */}
             <div className="absolute inset-0 bg-black/75 backdrop-blur-sm" onClick={closeProject}></div>
             
@@ -159,7 +159,7 @@ function ProjectsPage() {
             <div className="relative z-10 w-full h-full max-w-7xl mx-auto flex flex-col p-4 md:p-8" onClick={(e) => e.stopPropagation()}>
               
               {/* Header */}
-              <div className="flex justify-between items-start mb-4 md:mb-6 animate-slide-down">
+              <div className="flex justify-between items-start mb-4 md:mb-6 projects-animate-slide-down">
                 <div className="flex-1">
                   <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2">{selectedProject.title}</h2>
                   <div className="flex flex-wrap gap-2 md:gap-4 text-xs md:text-sm text-gray-300">
@@ -204,7 +204,7 @@ function ProjectsPage() {
                   <img 
                     src={selectedProject.gallery[currentImageIndex]} 
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
-                    className="max-w-full max-h-full object-contain animate-image-appear shadow-2xl"
+                    className="max-w-full max-h-full object-contain projects-animate-image-appear shadow-2xl"
                     key={currentImageIndex}
                   />
                 </div>
@@ -235,7 +235,7 @@ function ProjectsPage() {
               </div>
 
               {/* Footer with Controls */}
-              <div className="mt-4 md:mt-6 flex flex-col md:flex-row items-center justify-between gap-4 animate-slide-up">
+              <div className="mt-4 md:mt-6 flex flex-col md:flex-row items-center justify-between gap-4 projects-animate-slide-up">
                 
                 {/* Image Counter */}
                 <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full">
@@ -292,59 +292,6 @@ function ProjectsPage() {
             </div>
           </div>
         )}
-
-        <style>{`
-          @keyframes fade-in {
-            from { 
-              opacity: 0; 
-            }
-            to { 
-              opacity: 1; 
-            }
-          }
-          @keyframes slide-down {
-            from { 
-              opacity: 0; 
-              transform: translateY(-20px); 
-            }
-            to { 
-              opacity: 1; 
-              transform: translateY(0); 
-            }
-          }
-          @keyframes slide-up {
-            from { 
-              opacity: 0; 
-              transform: translateY(20px); 
-            }
-            to { 
-              opacity: 1; 
-              transform: translateY(0); 
-            }
-          }
-          @keyframes image-appear {
-            from { 
-              opacity: 0; 
-              transform: scale(0.95); 
-            }
-            to { 
-              opacity: 1; 
-              transform: scale(1); 
-            }
-          }
-          .animate-fade-in { 
-            animation: fade-in 300ms ease-out; 
-          }
-          .animate-slide-down { 
-            animation: slide-down 400ms ease-out; 
-          }
-          .animate-slide-up { 
-            animation: slide-up 400ms ease-out; 
-          }
-          .animate-image-appear { 
-            animation: image-appear 500ms cubic-bezier(0.16, 1, 0.3, 1); 
-          }
-        `}</style>
 
         <ContactForm />
         <Footer />
