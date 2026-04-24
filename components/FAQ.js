@@ -45,37 +45,22 @@ function FAQ() {
           </div>
 
           {/* Accordion list */}
-          <div className="max-w-3xl mx-auto" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div className="max-w-6xl mx-auto faq-list">
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
                 <div
                   key={idx}
-                  className="relative rounded-2xl bg-white overflow-hidden"
-                  style={{
-                    border: '1px solid',
-                    borderColor: isOpen ? 'var(--primary-color)' : '#f3f4f6',
-                    boxShadow: isOpen
-                      ? '0 10px 25px -5px rgba(41,67,141,0.12), 0 4px 6px -2px rgba(41,67,141,0.06)'
-                      : '0 1px 3px 0 rgba(0,0,0,0.06)',
-                    transition: 'border-color 0.3s ease, box-shadow 0.3s ease'
-                  }}
+                  className={`relative rounded-2xl bg-white overflow-hidden faq-card ${isOpen ? 'faq-card-open' : ''}`}
                 >
                   {/* Animated left accent bar */}
                   <div
-                    className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl"
-                    style={{
-                      background: 'linear-gradient(to bottom, var(--primary-color), var(--secondary-color))',
-                      transform: isOpen ? 'scaleY(1)' : 'scaleY(0)',
-                      transformOrigin: 'top',
-                      transition: 'transform 0.3s ease'
-                    }}
+                    className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl faq-accent ${isOpen ? 'faq-accent-open' : ''}`}
                   ></div>
 
                   {/* Ghost index number */}
                   <span
-                    className="absolute top-2 right-14 text-6xl font-black select-none leading-none pointer-events-none"
-                    style={{ color: 'rgba(41,67,141,0.05)' }}
+                    className="absolute top-2 right-14 text-6xl font-black select-none leading-none pointer-events-none faq-ghost-index"
                   >
                     {String(idx + 1).padStart(2, '0')}
                   </span>
@@ -87,43 +72,26 @@ function FAQ() {
                     aria-expanded={isOpen}
                   >
                     <span
-                      className="text-base font-semibold pr-2"
-                      style={{
-                        color: isOpen ? 'var(--primary-color)' : '#111827',
-                        transition: 'color 0.2s ease'
-                      }}
+                      className={`text-xl font-semibold pr-2 faq-question-text ${isOpen ? 'faq-question-text-open' : ''}`}
                     >
                       {faq.question}
                     </span>
 
                     {/* Chevron circle */}
                     <span
-                      className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center"
-                      style={{
-                        backgroundColor: isOpen ? 'var(--primary-color)' : 'var(--background-third)',
-                        color: isOpen ? '#ffffff' : 'var(--primary-color)',
-                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                        transition: 'transform 0.3s ease, background-color 0.3s ease, color 0.3s ease'
-                      }}
+                      className={`flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center faq-chevron ${isOpen ? 'faq-chevron-open' : ''}`}
                     >
-                      <i className="icon-chevron-down" style={{ fontSize: '1rem' }}></i>
+                      <i className="icon-chevron-down faq-chevron-icon"></i>
                     </span>
                   </button>
 
                   {/* Answer panel */}
                   <div
-                    style={{
-                      maxHeight: isOpen ? '400px' : '0px',
-                      overflow: 'hidden',
-                      transition: 'max-height 0.35s ease'
-                    }}
+                    className={`faq-answer-panel ${isOpen ? 'faq-answer-panel-open' : ''}`}
                   >
                     <div className="px-7 pb-6">
                       <div className="w-full h-px bg-gray-100 mb-4"></div>
-                      <p
-                        className="leading-relaxed"
-                        style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem' }}
-                      >
+                      <p className="leading-relaxed faq-answer-text">
                         {faq.answer}
                       </p>
                     </div>

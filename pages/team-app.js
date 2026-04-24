@@ -37,21 +37,32 @@ function TeamPage() {
     ];
 
     const team = [
-      { name: 'Amit Patel', title: 'Civil Engineer', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80' },
-      { name: 'Sneha Desai', title: 'Structural Designer', image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=80' },
-      { name: 'Vikram Singh', title: 'Draftsman', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-      { name: 'Anita Reddy', title: 'Interior Designer', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80' },
-      { name: 'Rahul Joshi', title: 'Project Manager', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80' },
-      { name: 'Meera Iyer', title: 'Legal Associate', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80' },
-      { name: 'Karan Mehta', title: 'Civil Engineer', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80' },
-      { name: 'Pooja Gupta', title: 'Architect', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80' },
-      { name: 'Sanjay Kumar', title: 'Structural Engineer', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80' },
-      { name: 'Divya Shah', title: 'Business Development', image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80' },
-      { name: 'Arjun Nair', title: 'Site Supervisor', image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&q=80' },
-      { name: 'Kavita Rao', title: 'Architect', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80' },
-      { name: 'Ravi Deshmukh', title: 'Draftsman', image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&q=80' },
-      { name: 'Nisha Pillai', title: 'Quality Controller', image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&q=80' },
-      { name: 'Anil Kapoor', title: 'Safety Officer', image: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&q=80' }
+      { name: 'Ar. Nitin Tombhare', title: 'Associate Architect', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80' },
+      { name: 'Ar. Jayendra Patel', title: 'Associate Architect', image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=80' },
+      { name: 'Ar. Richa Goyal', title: 'Associate Architect', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
+      { name: 'Ar. Nitin Vora', title: 'Senior Architect', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80' },
+      { name: 'Ar. Dilip Kadam', title: 'Senior Architect', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80' },
+      { name: 'Mr. Sandesh Kadam', title: 'Draftsmen', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80' },
+      { name: 'Mrs. Trupti Gurav', title: 'Draftsmen', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80' },
+      { name: 'Mr. Kumar Patil', title: 'Draftsmen', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80' },
+      { name: 'Mr. Jignesh Gondaliya', title: 'Licensing Personal', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80' },
+      { name: 'Mr. Varun Desai', title: 'Licensing Personal', image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80' },
+      { name: 'Mr. Sandesh Patil', title: 'Licensing Personal', image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&q=80' },
+      { name: 'Mr. Dhananjay Gurkhe', title: 'Licensing Personal', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80' },
+      { name: 'Mr. Prakash Patil', title: 'Site Engineer/Supervisor', image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&q=80' },
+      { name: 'Mr. Santosh More', title: 'Site Engineer/Supervisor', image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&q=80' },
+      { name: 'Mr. Nikhil Salian', title: 'Legal Associate', image: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&q=80' },
+      { name: 'Ms. Kirti Nagda', title: 'Legal Associate', image: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=400&q=80' },
+      { name: 'Mr. Rajesh Sharma', title: 'Legal Associate', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80' },
+      { name: 'Mr. Rajesh Sharma', title: 'Legal Associate', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80' },
+      { name: 'Mr. Pal Ajay Singh', title: 'Structural Associate', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80' },
+      { name: 'Evolute Team', title: 'Structural Associates', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
+      { name: 'Madan Dedhia & Co.', title: 'Chartered Accountants', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80' },
+      { name: 'Mohd. Shahid & Associates', title: 'Chartered Accountants', image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&q=80' },
+      { name: 'Mr. Vishal Parekh', title: 'Business Development', image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&q=80' },
+      { name: 'Mrs. Darshana Gawade', title: 'Office Admin Staff', image: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=400&q=80' },
+      { name: 'Mr. Rohit Salvi', title: 'Office Admin Staff', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80' },
+      { name: 'Mr. Vaishnav Gurav', title: 'Office Admin Staff', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80' }
     ];
 
     return (

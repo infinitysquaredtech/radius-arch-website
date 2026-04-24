@@ -251,7 +251,7 @@ function ContactForm() {
                     <label className="block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Security Verification *</label>
                     <div className="flex items-center space-x-3">
                       <div className="relative">
-                        <div className="px-5 py-2.5 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg font-mono text-lg tracking-[0.3em] text-white select-none shadow-inner" style={{fontStyle: 'italic', letterSpacing: '0.25em'}}>
+                        <div className="px-5 py-2.5 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg font-mono text-lg tracking-[0.3em] text-white select-none shadow-inner contact-captcha-code">
                           {captcha}
                         </div>
                       </div>
@@ -285,19 +285,6 @@ function ContactForm() {
           </div>
         </div>
 
-        <style>{`
-          @keyframes cf-fade-in {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-          @keyframes cf-scale-in {
-            0% { opacity: 0; transform: scale(0.3); }
-            50% { transform: scale(1.1); }
-            100% { opacity: 1; transform: scale(1); }
-          }
-          .animate-cf-fade-in { animation: cf-fade-in 500ms ease-out; }
-          .animate-cf-scale-in { animation: cf-scale-in 600ms ease-out; }
-        `}</style>
       </section>
     );
   } catch (error) {

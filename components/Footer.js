@@ -60,6 +60,7 @@ function Footer() {
               <div className="space-y-2.5">
                 <a href="#home" className={linkClass}>Home</a>
                 <a href="#services" className={linkClass}>Services</a>
+                <a href="#process" className={linkClass}>Section 79(A)</a>
                 <a href="projects.html" className={linkClass}>Projects</a>
                 <a href="team.html" className={linkClass}>Our Team</a>
                 <a href="#contact" className={linkClass}>Contact Us</a>
@@ -86,7 +87,7 @@ function Footer() {
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.1544715441323!2d72.84320257612414!3d19.100878151189264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b420d025dd%3A0xadc7429aa5547855!2sShyam%20Kamal%20C%20Bldg%2C%2027%2C%20Tejpal%20Rd%2C%20near%20Manoj%20Ornaments%20Private%20Limited%2C%20Agarwal%20Market%2C%20Park%20Road%2C%20Vile%20Parle%2C%20Mumbai%2C%20Maharashtra%20400057!5e0!3m2!1sen!2sin!4v1771772513337!5m2!1sen!2sin"
                   width="100%"
                   height="180"
-                  style={{ border: 0 }}
+                  className="footer-map-frame"
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

@@ -56,6 +56,8 @@ function Testimonials() {
     // On desktop we show 3 at a time, on mobile 1 at a time
     const visibleCount = typeof window !== 'undefined' && window.innerWidth >= 768 ? 3 : 1;
     const maxIndex = Math.max(0, testimonials.length - visibleCount);
+    const safeIndex = Math.min(currentIndex, maxIndex);
+    const trackClass = `testimonials-track-${visibleCount}-${safeIndex}`;
 
     React.useEffect(() => {
       const interval = setInterval(() => {
@@ -72,10 +74,10 @@ function Testimonials() {
           
           <div className="relative">
             <div className="overflow-hidden">
-              <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / visibleCount)}%)` }}>
+              <div className={`flex transition-transform duration-500 ease-in-out testimonials-track ${trackClass}`}>
                 {testimonials.map((testimonial, idx) => (
                   <div key={idx} className="min-w-full md:min-w-[33.333%] px-4">
-                    <div className="bg-[var(--background-third)] p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div className="min-h-full bg-[var(--background-third)] p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                       <div className="flex items-center mb-6">
                         <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
                         <div>
