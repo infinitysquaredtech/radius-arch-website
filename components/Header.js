@@ -87,7 +87,7 @@ function Header() {
               <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="w-64 h-auto transition-transform duration-300 hover:scale-105" />
             </a>
             
-            <nav className="hidden md:flex space-x-8">
+            <nav className="header-desktop-nav hidden md:flex space-x-8">
               <a href="#home" onClick={(e) => navigateToSection(e, 'home')} className="text-[var(--text-primary)] hover:text-[var(--secondary-color)] transition-all duration-300 hover:scale-105">Home</a>
               <a href="#clients" onClick={(e) => navigateToSection(e, 'clients')} className="text-[var(--text-primary)] hover:text-[var(--secondary-color)] transition-all duration-300 hover:scale-105">Clients</a>
               <div className="relative">
@@ -111,21 +111,13 @@ function Header() {
               <a href="#contact" onClick={(e) => navigateToSection(e, 'contact')} className="text-[var(--text-primary)] hover:text-[var(--secondary-color)] transition">Contact Us</a>
             </nav>
 
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden transition-transform duration-300 hover:scale-110 active:scale-95">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="header-mobile-toggle md:hidden transition-transform duration-300 hover:scale-110 active:scale-95">
               <div className={`icon-${mobileMenuOpen ? 'x' : 'menu'} text-2xl text-[var(--primary-color)] transition-all duration-300`}></div>
             </button>
           </div>
 
-          <style>{`
-            @keyframes fade-in {
-              from { opacity: 0; transform: translateY(-10px); }
-              to { opacity: 1; transform: translateY(0); }
-            }
-            .animate-fade-in { animation: fade-in 300ms ease-out; }
-          `}</style>
-
           {mobileMenuOpen && (
-            <div className="md:hidden bg-white py-4 border-t animate-fade-in">
+            <div className="header-mobile-menu md:hidden bg-white py-4 border-t animate-fade-in">
               <a href="#home" onClick={(e) => navigateToSection(e, 'home')} className="block py-2 transition-all duration-200 hover:translate-x-2 hover:text-[var(--secondary-color)]">Home</a>
               <a href="#clients" onClick={(e) => navigateToSection(e, 'clients')} className="block py-2 transition-all duration-200 hover:translate-x-2 hover:text-[var(--secondary-color)]">Clients</a>
               <div>

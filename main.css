@@ -112,3 +112,24 @@
 
 .animate-scroll { animation: scroll 35s linear infinite; }
 .animate-scroll-reverse { animation: scroll-reverse 35s linear infinite; }
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 300ms ease-out;
+}
+
+@media (max-width: 1029px) {
+    .header-desktop-nav { display: none !important; }
+    .header-mobile-toggle { display: block !important; }
+    .header-mobile-menu { display: block !important; }
+}
+
+@media (min-width: 1030px) {
+    .header-desktop-nav { display: flex !important; }
+    .header-mobile-toggle { display: none !important; }
+    .header-mobile-menu { display: none !important; }
+}
