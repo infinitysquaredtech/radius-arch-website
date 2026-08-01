@@ -61,10 +61,9 @@ function Header() {
     }, []);
 
     React.useEffect(() => {
-      const isLandingPage =
-        window.location.pathname === "/" ||
-        window.location.pathname === "/index.html" ||
-        window.location.pathname.endsWith("/");
+      const pathParts = window.location.pathname.split("/");
+      const lastPart = pathParts[pathParts.length - 1];
+      const isLandingPage = lastPart === "" || lastPart === "index.html";
 
       if (!isLandingPage) {
         setIsVisible(true);
