@@ -18,7 +18,7 @@ function AboutSection() {
 
             <div>
               <p className="text-lg text-[var(--text-secondary)] mb-6 leading-relaxed">
-                We specialize in comprehensive licensing solutions for real estate projects across multiple regulatory authorities. Our expertise spans <span className="font-semibold text-[var(--primary-color)]">BMC, MCGM, MHADA, and SRA</span>, ensuring complete compliance with <span className="font-semibold text-[var(--primary-color)]">DCPR 2034</span> regulations.
+                We specialize in comprehensive liasoning solutions for real estate projects across multiple regulatory authorities. Our expertise spans <span className="font-semibold text-[var(--primary-color)]">BMC, MCGM, MHADA, and SRA</span>, ensuring complete compliance with <span className="font-semibold text-[var(--primary-color)]">DCPR 2034</span> regulations.
               </p>
               <p className="text-lg text-[var(--text-secondary)] mb-8 leading-relaxed">
                 With a dedicated team of 22+ professionals including senior architects with 25+ years of experience, civil engineers, and legal advisors, we deliver seamless multi-authority liaison services for new and upcoming real estate projects.

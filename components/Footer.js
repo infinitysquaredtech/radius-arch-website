@@ -25,7 +25,7 @@ function Footer() {
       { title: 'Construction Management', idx: 1 },
       { title: 'Interior Designing', idx: 2 },
       { title: 'Architecture Design', idx: 3 },
-      { title: 'Licensing', idx: 4 },
+      { title: 'Liasoning', idx: 4 },
       { title: 'Structural Design', idx: 5 }
     ];
 
@@ -43,7 +43,7 @@ function Footer() {
             {/* Column 1: Brand + Authorities */}
             <div className="lg:col-span-1">
               <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="w-full h-auto" />
-              <p className="text-gray-600 text-sm mb-5 leading-relaxed">India's trusted partner for multi-authority licensing and DCPR 2034 compliance.</p>
+              <p className="text-gray-600 text-sm mb-5 leading-relaxed">India's trusted partner for multi-authority liasoning and DCPR 2034 compliance.</p>
               <h4 className="text-sm font-bold text-[var(--primary-color)] uppercase tracking-wider mb-3">Authorities We Work With</h4>
               <div className="flex flex-wrap gap-2">
                 {authorities.map((auth, idx) => (

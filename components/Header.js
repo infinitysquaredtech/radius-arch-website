@@ -11,7 +11,7 @@ function Header() {
       "Construction Management Consultation",
       "Interior Designing",
       "Architecture Design & Planning",
-      "Licensing",
+      "Liasoning",
       "Structural Design & Audit",
     ];
 

@@ -5,7 +5,7 @@ function ServicesGrid() {
       { icon: 'icon-hard-hat', title: 'Construction Management', desc: 'On-site supervision and quality control ensuring adherence to approved plans and standards.' },
       { icon: 'icon-paintbrush', title: 'Interior Designing', desc: 'Professional interior design services aligned with architectural plans and client vision.' },
       { icon: 'icon-pencil-ruler', title: 'Architecture Design', desc: 'Innovative architectural solutions with complete DCPR 2034 compliance and authority approvals.' },
-      { icon: 'icon-file-text', title: 'Licensing', desc: 'End-to-end licensing for BMC/MCGM/SRA with DCPR 2034 compliance. Zero delays guaranteed.' },
+      { icon: 'icon-file-text', title: 'Liasoning', desc: 'End-to-end liasoning for BMC/MCGM/SRA with DCPR 2034 compliance. Zero delays guaranteed.' },
       { icon: 'icon-building-2', title: 'Structural Design', desc: 'Comprehensive structural engineering, design, and audit services for safety and compliance.' }
     ];
 

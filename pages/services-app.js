@@ -53,10 +53,10 @@ function ServicesPage() {
         icon: 'icon-pencil-ruler'
       },
       {
-        title: 'Licensing',
-        desc: 'We handle BMC permits for 50+ projects with 0% delays. Complete end-to-end licensing for BMC/MCGM/SRA with DCPR 2034 compliance.',
+        title: 'Liasoning',
+        desc: 'We handle BMC permits for 50+ projects with 0% delays. Complete end-to-end liasoning for BMC/MCGM/SRA with DCPR 2034 compliance.',
         backgroundImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80',
-        content: 'Our licensing services are our core strength with a proven track record of zero delays across 50+ projects. We handle all aspects of multi-authority licensing including BMC, MCGM, MHADA, and SRA with complete DCPR 2034 compliance. Our dedicated team maintains constant liaison with authorities, ensuring smooth approvals and timely project commencement.',
+        content: 'Our liasoning services are our core strength with a proven track record of zero delays across 50+ projects. We handle all aspects of multi-authority liasoning including BMC, MCGM, MHADA, and SRA with complete DCPR 2034 compliance. Our dedicated team maintains constant liaison with authorities, ensuring smooth approvals and timely project commencement.',
         features: ['DCPR 2034 Expertise', '24/7 Authority Liaison', 'Zero Delays', 'Cost-Effective Solutions'],
         icon: 'icon-file-text'
       },

@@ -4,11 +4,11 @@ function FAQ() {
 
     const faqs = [
       {
-        question: 'What licensing authorities do you work with?',
+        question: 'What liasoning authorities do you work with?',
         answer: 'We work with all major regulatory bodies in Mumbai including BMC (Brihanmumbai Municipal Corporation), MCGM, MHADA (Maharashtra Housing and Area Development Authority), and SRA (Slum Rehabilitation Authority). Our team has deep relationships and expertise across all these authorities to ensure smooth approvals.'
       },
       {
-        question: 'How long does the licensing and approval process typically take?',
+        question: 'How long does the liasoning and approval process typically take?',
         answer: 'The timeline varies depending on the project type and authority involved. BMC/MCGM approvals typically take 3–6 months, while MHADA and SRA projects may take 6–12 months due to their complexity. Our 25+ years of experience and proactive approach significantly reduce these timelines — we guarantee zero unnecessary delays.'
       },
       {
@@ -21,7 +21,7 @@ function FAQ() {
       },
       {
         question: 'What makes Radius Architects different from other consultancies?',
-        answer: 'With 25+ years of experience, a team of 22+ licensed professionals, and a track record of zero-delay guarantees, we bring unmatched depth to every project. We handle the full spectrum — from architectural design and structural engineering to interior design and multi-authority licensing — all under one roof.'
+        answer: 'With 25+ years of experience, a team of 22+ licensed professionals, and a track record of zero-delay guarantees, we bring unmatched depth to every project. We handle the full spectrum — from architectural design and structural engineering to interior design and multi-authority liasoning — all under one roof.'
       },
       {
         question: 'How do I get started with my project?',
