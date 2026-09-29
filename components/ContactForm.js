@@ -1,5 +1,8 @@
 function ContactForm() {
   try {
+    // Get your free access key at https://web3forms.com and paste it below
+    const WEB3FORMS_ACCESS_KEY = "51725bc0-0023-4d7e-a3ad-111ca4a98cc2";
+
     const [formData, setFormData] = React.useState({
       name: "",
       email: "",
@@ -11,6 +14,8 @@ function ContactForm() {
     const [captchaInput, setCaptchaInput] = React.useState("");
     const [submitted, setSubmitted] = React.useState(false);
     const [focusedField, setFocusedField] = React.useState(null);
+    const [submitting, setSubmitting] = React.useState(false);
+    const [submitError, setSubmitError] = React.useState("");
 
     React.useEffect(() => {
       generateCaptcha();
@@ -25,16 +30,57 @@ function ContactForm() {
       setCaptcha(result);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
       e.preventDefault();
+      const form = e.target;
       if (captchaInput !== captcha) {
         alert("Invalid CAPTCHA. Please try again.");
         generateCaptcha();
         setCaptchaInput("");
         return;
       }
-      setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 5000);
+      setSubmitting(true);
+      setSubmitError("");
+      try {
+        const payload = new FormData();
+        payload.append("access_key", WEB3FORMS_ACCESS_KEY);
+        payload.append("name", formData.name);
+        payload.append("email", formData.email);
+        payload.append("phone", formData.phone);
+        payload.append("projectType", formData.projectType);
+        payload.append("message", formData.message);
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: payload,
+        });
+        const data = await response.json();
+
+        if (data.success) {
+          setSubmitted(true);
+          form.reset();
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            projectType: "",
+            message: "",
+          });
+          setCaptchaInput("");
+          generateCaptcha();
+          setTimeout(() => setSubmitted(false), 5000);
+        } else {
+          setSubmitError(
+            data.message || "Something went wrong. Please try again.",
+          );
+        }
+      } catch (err) {
+        setSubmitError(
+          "Network error. Please check your connection and try again.",
+        );
+      } finally {
+        setSubmitting(false);
+      }
     };
 
     const contactInfo = [
@@ -389,11 +435,18 @@ function ContactForm() {
                   {/* Submit */}
                   <button
                     type="submit"
-                    className="w-full py-4 bg-(--primary-color) text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] active:translate-y-[0px] active:shadow-md flex items-center justify-center space-x-2 group hover:bg-(--secondary-color) hover:text-(--text-primary)"
+                    disabled={submitting}
+                    className="w-full py-4 bg-(--primary-color) text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] active:translate-y-[0px] active:shadow-md flex items-center justify-center space-x-2 group hover:bg-(--secondary-color) hover:text-(--text-primary) disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <span>Send Message</span>
+                    <span>{submitting ? "Sending..." : "Send Message"}</span>
                     <div className="icon-send text-sm transition-transform duration-300 group-hover:translate-x-1"></div>
                   </button>
+
+                  {submitError && (
+                    <p className="text-sm text-center text-red-600 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
+                      {submitError}
+                    </p>
+                  )}
 
                   <p className="text-sm text-center text-gray-400 mt-2">
                     We respect your privacy. Your information will never be
