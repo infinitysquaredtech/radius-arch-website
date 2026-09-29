@@ -5,17 +5,17 @@ function Hero() {
         <video autoPlay loop muted playsInline poster="assets/video-placeholder.webp" className="absolute inset-0 w-full h-full object-cover z-0">
           <source src="assets/landing_page_video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)] via-[#0d3d5f] to-[var(--primary-color)] opacity-30 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-(--primary-color) via-[#0d3d5f] to-(--primary-color) opacity-30 z-10"></div>
         
         <div className="relative z-20 text-center mx-auto px-4 sm:px-6 lg:px-36">
           <h1 className="text-4xl! md:text-5xl! text-white text-shadow-lg mb-6 leading-tight ">
-            Your Trusted Partner for BMC/MCGM/SRA Licensing & DCPR 2034 Compliance
+            Your Trusted Partner for BMC/MCGM/SRA Liasoning & DCPR 2034 Compliance
           </h1>
           <p className="text-xl! md:text-2xl! font-bold text-gray-200 text-shadow-lg mb-8">
             Expert guidance and end-to-end solutions for hassle-free approvals and project success
           </p>
-          <a href="#contact" className="inline-block px-8 py-4 bg-[var(--primary-color)] text-[var(--background)] font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg text-lg hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary)]">
-            Get Licensing Consultation
+          <a href="#contact" className="inline-block px-8 py-4 bg-(--primary-color) text-(--background) font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg text-lg hover:bg-(--secondary-color) hover:text-(--text-primary)">
+            Get Liasoning Consultation
           </a>
         </div>
 
