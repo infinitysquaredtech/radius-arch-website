@@ -45,7 +45,8 @@ function ClientsServed() {
       },
       {
         name: "JE & VEE Group",
-        image: "https://jnvinfra.com/wp-content/uploads/2024/02/logo-small.png",
+        image:
+          "https://www.jnvinfra.com/wp-content/uploads/elementor/thumbs/jenvee-white-rowfy189hmds0l3bfe3qgjepn7obea5h6ezg3bhfk0.png",
       },
       {
         name: "Ajmera Developers",
@@ -54,8 +55,7 @@ function ClientsServed() {
       },
       {
         name: "Inspira Builders",
-        image:
-          "https://i0.wp.com/www.inspirabuilders.com/wp-content/uploads/2019/10/Inspira-Logo-Blue.jpg?w=200&ssl=1",
+        image: "/assets/logos/inspira-logo.webp",
       },
     ];
     const clientLogos2 = [
@@ -79,7 +79,7 @@ function ClientsServed() {
       },
       {
         name: "Hiranandani Group",
-        image: "assets/logos/Hiranandani-logo.webp",
+        image: "/assets/logos/Hiranandani-logo.webp",
       },
       {
         name: "K Raheja Corp",

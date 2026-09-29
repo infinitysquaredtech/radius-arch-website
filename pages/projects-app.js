@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-const PROJECT_PLACEHOLDER = "assets/projects/placeholder.jpg";
+const PROJECT_PLACEHOLDER = "assets/projects/placeholder.webp";
 
 function ProjectsPage() {
   try {
@@ -100,28 +100,122 @@ function ProjectsPage() {
 
     const projects = [
       {
-        title: "Marine Drive Redevelopment",
-        status: "On-going",
-        client: "MHADA",
-        location: "Marine Drive, Mumbai",
-        image: "",
-        gallery: [],
+        title: "Bharat Arize (Ganpati Niwas CHSL)",
+        status: "Completed",
+        client: "Bharat Infra Developer",
+        location: "Goregaon (W), Mumbai",
+        image: "/assets/projects/ganapati_niwas_chs_2.webp",
+        gallery: [
+          "/assets/projects/ganapati_niwas_chs_1.webp",
+          "/assets/projects/ganapati_niwas_chs_2.webp",
+        ],
       },
       {
-        title: "Navi Mumbai Residential Complex",
-        status: "Completed - 2023",
-        client: "BMC",
-        location: "Navi Mumbai",
-        image: "",
-        gallery: [],
+        title: "Irma CHSL",
+        status: "Completed",
+        client: "Shelaji Group",
+        location: "Borivali (W), Mumbai",
+        image: "/assets/projects/irma_chs_1.webp",
+        gallery: ["/assets/projects/irma_chs_1.webp"],
       },
       {
-        title: "Dharavi SRA Housing Project",
-        status: "Completed - 2022",
-        client: "SRA",
-        location: "Dharavi, Mumbai",
-        image: "",
-        gallery: [],
+        title: "Kabra Metro One",
+        status: "Completed",
+        client: "Kabra Developer",
+        location: "Andheri (W), Mumbai",
+        image: "/assets/projects/kabra_metro_one_1.webp",
+        gallery: ["/assets/projects/kabra_metro_one_1.webp"],
+      },
+      {
+        title: "Rupa Adarsh CHSL",
+        status: "Completed",
+        client: "Rupa Adarsh CHSL",
+        location: "Santacruz (W), Mumbai",
+        image: "/assets/projects/rupa_adarsh_chsl_1.webp",
+        gallery: [
+          "/assets/projects/rupa_adarsh_chsl_1.webp",
+          "/assets/projects/rupa_adarsh_chsl_2.webp",
+        ],
+      },
+      {
+        title: "Jeevan Sona CHSL",
+        status: "Completed",
+        client: "Jeevan Sona CHSL",
+        location: "Santacruz (W), Mumbai",
+        image: "/assets/projects/jeevan_sona_chsl_1.webp",
+        gallery: [
+          "/assets/projects/jeevan_sona_chsl_1.webp",
+          "/assets/projects/jeevan_sona_chsl_2.webp",
+        ],
+      },
+      {
+        title: "Bombay Art Gallery",
+        status: "Completed",
+        client: "Bombay Art Gallery",
+        location: "Bandra (W), Mumbai",
+        image: "/assets/projects/bombay_art_gallery_1.webp",
+        gallery: [
+          "/assets/projects/bombay_art_gallery_1.webp",
+          "/assets/projects/bombay_art_gallery_2.webp",
+        ],
+      },
+      {
+        title: "Bharat Skyvista",
+        status: "Completed",
+        client: "Bharat Skyvista",
+        location: "Andheri (W), Mumbai",
+        image: "/assets/projects/bharat_skyvista_1.webp",
+        gallery: [
+          "/assets/projects/bharat_skyvista_1.webp",
+          "/assets/projects/bharat_skyvista_2.webp",
+          "/assets/projects/bharat_skyvista_3.webp",
+        ],
+      },
+      {
+        title: "Posh Villa",
+        status: "Completed",
+        client: "Posh Villa",
+        location: "Wada, Pimplas",
+        image: "/assets/projects/posh_villa_1.webp",
+        gallery: [
+          "/assets/projects/posh_villa_1.webp",
+          "/assets/projects/posh_villa_2.webp",
+        ],
+      },
+      {
+        title: "Sahayadri Apartment",
+        status: "Completed",
+        client: "Sahayadri Apartment",
+        location: "Andheri (W), Mumbai",
+        image: "/assets/projects/sahayadri_apartment_1.webp",
+        gallery: ["/assets/projects/sahayadri_apartment_1.webp"],
+      },
+      {
+        title: "Zee Nayak",
+        status: "Completed",
+        client: "Zee Nayak",
+        location: "Vile Parle (E), Mumbai",
+        image: "/assets/projects/zee_nayak_1.webp",
+        gallery: ["/assets/projects/zee_nayak_1.webp"],
+      },
+      {
+        title: "Mehndi Villa",
+        status: "Completed",
+        client: "Mehndi Villa",
+        location: "Bandra (W), Mumbai",
+        image: "/assets/projects/mehndi_villa_1.webp",
+        gallery: ["/assets/projects/mehndi_villa_1.webp"],
+      },
+      {
+        title: "Suchit",
+        status: "Completed",
+        client: "Suchit",
+        location: "Santacruz (E), Mumbai",
+        image: "/assets/projects/suchit_1.webp",
+        gallery: [
+          "/assets/projects/suchit_1.webp",
+          "/assets/projects/suchit_2.webp",
+        ],
       },
     ];
 
