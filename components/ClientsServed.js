@@ -56,7 +56,7 @@ function ClientsServed() {
       },
       {
         name: "Inspira Builders",
-        image: "/assets/logos/inspira-logo.webp",
+        image: "assets/logos/inspira-logo.webp",
       },
       {
         name: "Lotus Developers",
@@ -65,8 +65,7 @@ function ClientsServed() {
       },
       {
         name: "Kalpataru Developers",
-        image:
-          "https://cdn.brandfetch.io/idGdvjS8kO/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1767143324011",
+        image: "assets/logos/kalpataru-logo.webp",
       },
       {
         name: "Prestige Group",
@@ -74,7 +73,7 @@ function ClientsServed() {
       },
       {
         name: "Hiranandani Group",
-        image: "/assets/logos/Hiranandani-logo.webp",
+        image: "assets/logos/Hiranandani-logo.webp",
       },
       {
         name: "K Raheja Corp",
