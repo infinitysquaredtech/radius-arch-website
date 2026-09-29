@@ -44,24 +44,19 @@ function ClientsServed() {
         image: "https://www.alliancecity.co.in/assets/img/logo.png",
       },
       {
-        name: "JE & VEE Group",
-        image:
-          "https://www.jnvinfra.com/wp-content/uploads/elementor/thumbs/jenvee-white-rowfy189hmds0l3bfe3qgjepn7obea5h6ezg3bhfk0.png",
-      },
-      {
         name: "Ajmera Developers",
         image:
           "https://www.propmart.co/wp-content/uploads/2021/11/download-1.png",
-      },
-      {
-        name: "Inspira Builders",
-        image: "/assets/logos/inspira-logo.webp",
       },
     ];
     const clientLogos2 = [
       {
         name: "Purvankara Group",
         image: "https://www.puravankara.com/images/purvankara-logo.svg",
+      },
+      {
+        name: "Inspira Builders",
+        image: "/assets/logos/inspira-logo.webp",
       },
       {
         name: "Lotus Developers",
