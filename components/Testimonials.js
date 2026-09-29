@@ -77,10 +77,10 @@ function Testimonials() {
         data-file="components/Testimonials.js"
       >
         <div className="mx-auto px-4 sm:px-6 lg:px-20">
-          <h2 className="text-4xl text-center text-[var(--primary-color)] mb-2">
+          <h2 className="text-4xl text-center text-(--primary-color) mb-2">
             Testimonials
           </h2>
-          <h3 className="text-xl text-center text-[var(--text-secondary)] mb-12">
+          <h3 className="text-xl text-center text-(--text-secondary) mb-12">
             What Our Clients Say
           </h3>
 
@@ -91,7 +91,7 @@ function Testimonials() {
               >
                 {testimonials.map((testimonial, idx) => (
                   <div key={idx} className="min-w-full md:min-w-[33.333%] px-4">
-                    <div className="min-h-full bg-[var(--background-third)] p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div className="min-h-full bg-(--background-third) p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                       <div className="flex items-center mb-6">
                         <img
                           src={testimonial.image || TESTIMONIAL_PLACEHOLDER}
@@ -100,15 +100,15 @@ function Testimonials() {
                           loading="lazy"
                         />
                         <div>
-                          <h3 className="font-bold text-[var(--primary-color)]">
+                          <h3 className="font-bold text-(--primary-color)">
                             {testimonial.name}
                           </h3>
-                          <p className="text-sm text-[var(--text-secondary)]">
+                          <p className="text-sm text-(--text-secondary)">
                             {testimonial.role}
                           </p>
                         </div>
                       </div>
-                      <p className="text-[var(--text-secondary)] leading-relaxed italic">
+                      <p className="text-(--text-secondary) leading-relaxed italic">
                         "{testimonial.text}"
                       </p>
                     </div>
@@ -121,7 +121,7 @@ function Testimonials() {
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === idx ? "bg-[var(--primary-color)] w-8" : "bg-gray-300"}`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === idx ? "bg-(--primary-color) w-8" : "bg-gray-300"}`}
                 ></button>
               ))}
             </div>

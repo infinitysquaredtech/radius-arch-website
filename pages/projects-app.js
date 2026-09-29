@@ -130,7 +130,7 @@ function ProjectsPage() {
         <Header />
         <section className="py-20 bg-gray-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-36">
-            <h1 className="text-5xl text-center text-[var(--primary-color)] mb-16">
+            <h1 className="text-5xl text-center text-(--primary-color) mb-16">
               Our Projects
             </h1>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,7 +146,7 @@ function ProjectsPage() {
                     loading="lazy"
                   />
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-[var(--primary-color)] mb-2 transition-colors duration-300 group-hover:text-[var(--secondary-color)]">
+                    <h3 className="text-xl font-bold text-(--primary-color) mb-2 transition-colors duration-300 group-hover:text-(--secondary-color)">
                       {project.title}
                     </h3>
                     <p
@@ -154,15 +154,15 @@ function ProjectsPage() {
                     >
                       {project.status}
                     </p>
-                    <p className="text-base text-[var(--text-secondary)] mb-1">
+                    <p className="text-base text-(--text-secondary) mb-1">
                       Client: {project.client}
                     </p>
-                    <p className="text-base text-[var(--text-secondary)] mb-4">
+                    <p className="text-base text-(--text-secondary) mb-4">
                       {project.location}
                     </p>
                     <button
                       onClick={() => openProject(project)}
-                      className="px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+                      className="px-4 py-2 bg-(--primary-color) text-white rounded hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
                     >
                       View Photos
                     </button>
