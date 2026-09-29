@@ -100,7 +100,7 @@ function MyBook(props) {
                             <div className="flipbook-cover-corner flipbook-cover-corner-br" />
 
                             {/* Logo */}
-                            <img src="assets/radius-logo.png" alt="Radius Architects & Associates" className="flipbook-cover-logo-front" />
+                            <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="flipbook-cover-logo-front" />
 
                             {/* Divider line */}
                             <div className="flipbook-cover-divider flipbook-cover-divider-front-top" />
@@ -215,7 +215,7 @@ function MyBook(props) {
                             <div className="flipbook-cover-corner flipbook-cover-corner-br" />
 
                             {/* Logo */}
-                            <img src="assets/radius-logo.png" alt="Radius Architects & Associates" className="flipbook-cover-logo-back" />
+                            <img src="assets/radius-logo2.webp" alt="Radius Architects & Associates" className="flipbook-cover-logo-back" />
 
                             <div className="flipbook-cover-divider flipbook-cover-divider-back-top" />
 
