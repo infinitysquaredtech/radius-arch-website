@@ -96,7 +96,7 @@ function ContactForm() {
       {
         icon: "icon-phone",
         title: "Call Us",
-        lines: ["+91 22 1234 5678", "+91 98765 43210"],
+        lines: ["+91 22 3550 5700", "+91 96195 33553"],
       },
       {
         icon: "icon-clock",
