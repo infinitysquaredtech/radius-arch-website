@@ -1,7 +1,7 @@
 function ContactForm() {
   try {
     // Get your free access key at https://web3forms.com and paste it below
-    const WEB3FORMS_ACCESS_KEY = "51725bc0-0023-4d7e-a3ad-111ca4a98cc2";
+    const WEB3FORMS_ACCESS_KEY = "46d6dd45-78e0-44aa-9659-d39e239d0a26";
 
     const [formData, setFormData] = React.useState({
       name: "",
